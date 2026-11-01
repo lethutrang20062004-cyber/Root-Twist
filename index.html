@@ -413,6 +413,17 @@ body{background:#fffdf9}
 #nguon-goc .ingredient-photo-pending>span{font-size:3rem;line-height:1}
 #nguon-goc .ingredient-photo-pending>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;padding:12px}
 @media(max-width:640px){#nguon-goc .ingredient-photo-pending{height:144px}#nguon-goc .ingredient-photo-pending>img{padding:8px}}
+
+/* Hoàn thiện bố cục cho bản dự thi – tối ưu ngắt dòng và tính nhất quán */
+#why-title,#research-title{max-width:1040px!important;margin-inline:auto;line-height:1.18;letter-spacing:-.028em;text-wrap:balance}
+#why-title span,#research-title span{display:block}
+#gia-tri .section-head,#nghien-cuu .section-head{max-width:1100px}
+#nguon-goc .mini-gallery figure{min-width:0}
+#nguon-goc .mini-gallery img{object-fit:contain}
+@media(max-width:760px){
+ #why-title,#research-title{font-size:clamp(1.75rem,6vw,2.6rem);line-height:1.22}
+ #why-title span,#research-title span{display:block}
+}
 </style>
 <meta content="images/banh-chinh.jpg" property="og:image"/></head>
 <body>
@@ -583,7 +594,7 @@ body{background:#fffdf9}
 <div class="container">
 <div class="section-head centered center reveal">
 <p class="eyebrow">GIÁ TRỊ NỔI BẬT</p>
-<h2 id="why-title">Một chiếc bánh nhỏ, ba lớp giá trị lớn</h2>
+<h2 id="why-title"><span>Một chiếc bánh nhỏ,</span><span>ba lớp giá trị lớn</span></h2>
 </div>
 <div class="cards-3">
 <article class="tile reveal"><div class="icon">◎</div><h3>Cho con người</h3><p>Niềm vui nhỏ giữa ngày bận rộn, khoảng 55 kcal mỗi bánh, giá vừa túi tiền người trẻ và tiếp sức cho sinh viên Việt sáng tạo.</p></article>
@@ -599,7 +610,7 @@ body{background:#fffdf9}
 <div class="container">
 <div class="section-head centered center reveal">
 <p class="eyebrow">NỀN TẢNG NGHIÊN CỨU</p>
-<h2 id="research-title">Bảy thí nghiệm. Một công thức được lựa chọn.</h2>
+<h2 id="research-title"><span>Bảy thí nghiệm.</span><span>Một công thức được lựa chọn.</span></h2>
 <p class="lead">Từ lựa chọn giống khoai, phối trộn vỏ đến cân bằng nhân caramel – kataifi: mỗi quyết định phát triển sản phẩm đều được khảo sát trong quá trình nghiên cứu.</p>
 </div>
 <div class="stats-grid">
