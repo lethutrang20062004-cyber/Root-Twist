@@ -365,6 +365,30 @@ body{background:#fffdf9}
 #san-pham .section-head .lead{max-width:760px;margin-inline:auto}
 #san-pham .gallery-card .sub-shot-cut img{object-fit:contain;background:#fff7f0;padding:10px}
 @media(max-width:560px){#san-pham #product-showcase-title{font-size:clamp(1.75rem,7.2vw,2.28rem);line-height:1.24}#san-pham .gallery-card{grid-template-columns:repeat(2,minmax(0,1fr))}#san-pham .gallery-card .sub-shot{min-height:145px}.mini-cut img{width:100%;height:auto;max-height:170px;object-fit:contain}}
+
+/* Bố cục nguồn gốc – sử dụng ảnh hiện có, khắc phục khoảng trắng trên màn hình lớn */
+#nguon-goc .trace-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:start}
+#nguon-goc .trace-block,#nguon-goc .source-block{width:100%;min-width:0}
+#nguon-goc .trace-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+#nguon-goc .trace-item{height:100%}
+#nguon-goc .mini-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:20px}
+#nguon-goc .mini-gallery figure{min-width:0;display:flex;flex-direction:column;overflow:hidden}
+#nguon-goc .mini-gallery img{width:100%;height:176px;aspect-ratio:auto;object-fit:contain;object-position:center;background:#fffdf9;padding:12px}
+#nguon-goc .mini-gallery figcaption{flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px 8px}
+#nguon-goc .source-block h3{margin-bottom:8px}
+#nguon-goc .source-block > p{max-width:780px}
+@media(max-width:860px){
+ #nguon-goc .trace-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #nguon-goc .mini-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+ #nguon-goc .mini-gallery img{height:156px}
+}
+@media(max-width:560px){
+ #nguon-goc .trace-block,#nguon-goc .source-block{padding:20px 16px}
+ #nguon-goc .trace-list{grid-template-columns:1fr;gap:10px}
+ #nguon-goc .mini-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ #nguon-goc .mini-gallery img{height:146px;padding:8px}
+ #nguon-goc .mini-gallery figcaption{font-size:.76rem;line-height:1.4}
+}
 </style>
 <meta content="images/banh-chinh.jpg" property="og:image"/></head>
 <body>
