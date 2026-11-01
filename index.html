@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#52143e" name="theme-color"/>
+<meta content="Root&amp;Twist Foods – Bánh khoai lang Kataifi Caramel mặn. Dự án phát triển sản phẩm của NextGen Food, đang trong giai đoạn thử nghiệm." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="Root&amp;Twist Foods | Bánh khoai lang Kataifi Caramel mặn" property="og:title"/>
+<meta content="Ba tầng vị trong một miếng cắn: mềm dẻo – đắng nhẹ – giòn rụm. Dự án sinh viên đang trong giai đoạn thử nghiệm." property="og:description"/>
+<title>Root&amp;Twist Foods | Bánh khoai lang Kataifi Caramel mặn</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Lora:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{
+      --plum:#52143e;
+      --plum-deep:#3d0b2e;
+      --plum-soft:#6c2a56;
+      --cream:#fcf6ee;
+      --white:#ffffff;
+      --caramel:#d9a441;
+      --sweet:#f0c78b;
+      --orange:#e07b24;
+      --brown:#3b2a1e;
+      --muted:#6a6058;
+      --line:#eadbca;
+      --shadow:0 24px 70px rgba(59,42,30,.12);
+      --radius-xl:30px;
+      --radius-lg:22px;
+      --radius-md:16px;
+      --max:1200px;
+      scroll-behavior:smooth;
+    }
+    *{box-sizing:border-box}
+    html{scroll-padding-top:92px}
+    body{margin:0;font:400 16px/1.75 'Be Vietnam Pro',system-ui,sans-serif;color:var(--brown);background:var(--white);overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--caramel);outline-offset:3px}
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .section{padding:84px 0}
+    .section-tight{padding:62px 0}
+    .bg-cream{background:var(--cream)}
+    .bg-plum{background:linear-gradient(180deg,var(--plum),var(--plum-deep));color:#fff}
+    .eyebrow{margin:0 0 14px;font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+    .bg-plum .eyebrow{color:#ffd79e}
+    h1,h2,h3{margin:0 0 16px;font-family:'Lora',Georgia,serif;line-height:1.16;color:inherit}
+    h1{font-size:clamp(2.75rem,6vw,5.2rem);letter-spacing:-.04em}
+    h2{font-size:clamp(2rem,3.8vw,3.35rem);letter-spacing:-.03em}
+    h3{font-size:1.24rem}
+    p{margin:0 0 16px}
+    .lead{font-size:clamp(1.04rem,1.5vw,1.18rem);line-height:1.9;color:var(--muted)}
+    .bg-plum .lead{color:rgba(255,255,255,.84)}
+    .muted{color:var(--muted)}
+    .accent{color:var(--orange)}
+    .center{text-align:center}
+    .centered{max-width:770px;margin-inline:auto}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 22px;min-height:52px;border-radius:999px;border:2px solid transparent;font-weight:800;font-size:.92rem;transition:.24s ease;white-space:nowrap}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--orange);color:#fff;box-shadow:0 16px 35px rgba(224,123,36,.26)}
+    .btn-primary:hover{background:#c86311}
+    .btn-outline{border-color:rgba(255,255,255,.45);color:#fff;background:transparent}
+    .btn-outline:hover{background:rgba(255,255,255,.08)}
+    .btn-ghost{border-color:var(--brown);color:var(--brown);background:#fff}
+    .btn-ghost:hover{background:#f7efe6}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+
+    .site-header{position:sticky;top:0;z-index:1000;background:rgba(252,246,238,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(82,20,62,.08)}
+    .nav-row{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:84px}
+    .brand{display:flex;align-items:center;gap:14px;min-width:0}
+    .brand img{width:54px;height:54px;object-fit:cover;border-radius:16px;box-shadow:0 10px 24px rgba(82,20,62,.12)}
+    .brand-copy{min-width:0}
+    .brand-title{font-size:1rem;font-weight:800;line-height:1.2;color:var(--plum)}
+    .brand-sub{font-size:.76rem;color:#6f635c;font-weight:700}
+    .nav-links{display:flex;align-items:center;gap:18px}
+    .nav-links>a:not(.btn){font-size:.84rem;font-weight:700;color:#5f534b}
+    .nav-links>a:not(.btn):hover{color:var(--plum)}
+    .menu-toggle{display:none;background:#fff;border:1px solid #d7c9bc;border-radius:12px;padding:10px;color:var(--plum)}
+
+    .hero{position:relative;padding:clamp(34px,5vw,54px) 0 86px;background:
+      radial-gradient(circle at top left, rgba(255,215,158,.16), transparent 26%),
+      radial-gradient(circle at 85% 18%, rgba(255,255,255,.08), transparent 22%),
+      linear-gradient(180deg, #5f1847 0%, #471237 100%);
+      color:#fff;overflow:hidden}
+    .hero::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:110px;background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(252,246,238,.9) 100%);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center}
+    .hero .lead{max-width:630px;color:rgba(255,255,255,.87)}
+    .hero-badges{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 30px}
+    .hero-badges span{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);font-size:.84rem;font-weight:700}
+    .hero-side{position:relative;min-height:620px}
+    .hero-product{position:absolute;right:0;top:26px;width:min(100%,540px);border-radius:34px;box-shadow:0 26px 72px rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.12)}
+    .floating-card{position:absolute;background:#fff;color:var(--brown);box-shadow:var(--shadow);border-radius:24px}
+    .score-card{left:6px;top:0;width:220px;padding:16px 18px 14px;transform:rotate(-5deg)}
+    .score-card .tiny-head{font-size:.82rem;font-weight:800;color:var(--plum);line-height:1.45;text-align:center}
+    .score-card .big{display:block;font-family:'Lora',serif;font-size:2.15rem;line-height:1;color:var(--plum);margin:12px 0 8px;text-align:center}
+    .score-card .mini{font-size:.76rem;color:#76695f;text-align:center}
+    .mini-cut{left:32px;bottom:22px;width:180px;padding:10px;border-radius:18px}
+    .mini-cut img{border-radius:12px}
+    .hero-note{right:8px;bottom:0;max-width:255px;padding:18px 18px 16px;background:linear-gradient(180deg,#fff,#fff8f0)}
+    .hero-note strong{display:block;font-size:1rem;color:var(--plum);margin-bottom:8px}
+    .hero-note p{font-size:.82rem;line-height:1.7;color:#6d6158;margin:0}
+
+    .identity-strip{margin-top:-34px;position:relative;z-index:2}
+    .identity-card{background:#fff;border-radius:26px;padding:22px 24px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.15fr .85fr .75fr;gap:18px;align-items:center}
+    .identity-item{padding:12px 6px}
+    .identity-item:not(:last-child){border-right:1px solid var(--line)}
+    .identity-label{font-size:.77rem;font-weight:800;color:#907f73;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+    .identity-value{font-size:1.03rem;font-weight:800;color:var(--plum)}
+    .identity-desc{font-size:.88rem;color:#72665d}
+
+    .story-grid,.product-grid,.signup-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .image-card,.content-card,.stat-card,.tile,.ingredient-card,.product-card,.faq-block,.signup-card,.gallery-card{background:#fff;border-radius:var(--radius-xl);box-shadow:var(--shadow)}
+    .image-card{overflow:hidden}
+    .image-card img{width:100%;height:100%;object-fit:cover}
+    .image-card.tall{min-height:520px}
+    .image-card.medium{min-height:420px}
+    .content-card{padding:34px}
+    .story-points{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+    .story-point{padding:18px;border-radius:18px;background:#fff7ed;border:1px solid #f0ddc2}
+    .story-point strong{display:block;margin-bottom:6px;color:var(--plum)}
+    .story-point p{margin:0;font-size:.88rem;color:#665b54}
+
+    .section-head{margin-bottom:34px}
+    .product-hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:24px;align-items:stretch}
+    .gallery-card{padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start}
+    .gallery-card .main-shot{grid-column:1/-1;border-radius:24px;overflow:hidden;min-height:350px}
+    .gallery-card .main-shot img,.gallery-card .sub-shot img{width:100%;height:100%;object-fit:cover}
+    .gallery-card .sub-shot{border-radius:18px;overflow:hidden;min-height:175px}
+    .product-summary{padding:36px;background:linear-gradient(180deg,#fff,#fff9f2);border:1px solid #f1e5d9}
+    .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+    .pill{padding:10px 14px;border-radius:999px;background:#fff6eb;border:1px solid #efd5b9;font-size:.84rem;font-weight:800;color:#67422d}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+    .metric{padding:18px;border-radius:20px;background:#fff;box-shadow:inset 0 0 0 1px #f1e5d8;text-align:center}
+    .metric strong{display:block;font-size:1.5rem;font-family:'Lora',serif;color:var(--plum)}
+    .metric span{display:block;margin-top:6px;font-size:.82rem;color:#7d7168}
+
+    .taste-grid{display:grid;grid-template-columns:.98fr 1.02fr;gap:40px;align-items:center}
+    .taste-visual{padding:26px;border-radius:30px;background:#fff5e7;box-shadow:var(--shadow)}
+    .taste-svg{display:block;width:100%;height:auto;max-width:500px;margin-inline:auto}
+    .layer{cursor:pointer;transition:.22s ease;transform-origin:center}
+    .layer.is-active,.layer:hover,.layer:focus-visible{filter:drop-shadow(0 0 10px rgba(224,123,36,.42))}
+    .layer.is-dim{opacity:.56}
+    .taste-list{display:grid;gap:14px}
+    .taste-item{padding:22px;border-radius:22px;background:#fff;border:1px solid #f1e1d0;box-shadow:0 14px 34px rgba(59,42,30,.06);cursor:pointer;transition:.22s ease}
+    .taste-item.is-active,.taste-item:hover,.taste-item:focus-visible{transform:translateX(4px);background:#fff6eb;border-color:#e8b173}
+    .taste-item h3{margin-bottom:8px}
+    .taste-item p{margin:0;color:#635851;font-size:.94rem}
+    .taste-note{margin-top:28px;padding:18px 22px;border-left:4px solid var(--orange);background:#fff8ef;border-radius:0 18px 18px 0;font-family:'Lora',serif;font-size:1.22rem;line-height:1.55}
+
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .stat-card{padding:26px;background:linear-gradient(180deg,#fff,#fff8f1);border:1px solid #f0dfd1}
+    .stat-card .num{display:block;font-size:clamp(1.85rem,3vw,2.6rem);line-height:1.05;font-family:'Lora',serif;color:var(--plum)}
+    .stat-card .label{display:block;margin-top:10px;font-size:.9rem;color:#6c6159}
+
+    .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .tile{padding:28px;border:1px solid #f2e5d9}
+    .icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:#fff2de;color:var(--orange);font-size:1.45rem;margin-bottom:16px}
+    .tile p{font-size:.92rem;color:#655a53;margin-bottom:0}
+
+    .timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:28px}
+    .step{padding:22px 14px 16px;border-radius:18px;background:#fff;border:1px solid #eedbc9;box-shadow:0 10px 28px rgba(59,42,30,.06);min-height:188px}
+    .step strong{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--orange);color:#fff;margin-bottom:14px}
+    .step p{font-size:.8rem;line-height:1.65;margin:0;color:#63574f}
+
+    .chart-card{margin-top:34px;padding:24px;border-radius:28px;background:#fff;box-shadow:var(--shadow)}
+    .chart-title{text-align:center;font-family:'Lora',serif;font-size:1.4rem;margin-bottom:12px;color:var(--plum)}
+    .chart-card svg{display:block;width:100%;height:auto}
+    .chart-caption{text-align:center;font-size:.82rem;color:#74685f;margin-top:10px}
+
+    .trace-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:start}
+    .trace-block,.source-block{padding:30px;border-radius:26px;background:#fff;box-shadow:var(--shadow)}
+    .trace-list{display:grid;gap:14px;margin-top:18px}
+    .trace-item{padding:16px 18px;border-radius:18px;background:#fff7ed;border:1px solid #f1ddc8}
+    .trace-item strong{display:block;margin-bottom:6px;color:var(--plum)}
+    .trace-item p{margin:0;font-size:.9rem;color:#655a53}
+    .mini-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .mini-gallery figure{margin:0;background:#fffaf4;border:1px solid #efe0d0;border-radius:18px;overflow:hidden}
+    .mini-gallery img{width:100%;aspect-ratio:1/1;object-fit:cover}
+    .mini-gallery figcaption{padding:10px 10px 12px;font-size:.8rem;font-weight:700;color:#624b3a;text-align:center}
+
+    .product-grid .content-card{height:100%}
+    .info-line{font-weight:800;color:var(--orange);margin-bottom:14px}
+    .nutrition{width:100%;border-collapse:collapse;margin:22px 0;border:1px solid #eadccd;border-radius:16px;overflow:hidden;background:#fff}
+    .nutrition caption{text-align:left;font-family:'Lora',serif;font-size:1.12rem;font-weight:700;margin-bottom:10px}
+    .nutrition th,.nutrition td{padding:10px 14px;border-bottom:1px solid #efe4d8}
+    .nutrition th{text-align:left;font-weight:500}
+    .nutrition td{text-align:right;font-weight:800}
+    .nutrition tr:last-child th,.nutrition tr:last-child td{border-bottom:none}
+    .note{font-size:.8rem;color:#73675d}
+    .allergy{padding:14px 16px;border-radius:16px;background:#fff5ef;border:1px solid #f0d1b8;margin-top:16px}
+    .allergy strong{color:#a04e1a}
+
+    .feedback-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:28px 0}
+    .feedback-box{padding:30px;border-radius:24px;background:#fff;box-shadow:var(--shadow);text-align:center}
+    .feedback-box strong{display:block;font-family:'Lora',serif;font-size:2rem;color:var(--plum);line-height:1.15}
+    .feedback-box span{display:block;margin-top:10px;color:#6f635a}
+    .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .quote{padding:24px;border-radius:22px;background:#fff8f2;border:1px solid #eedccc;min-height:156px;display:flex;align-items:center;justify-content:center;text-align:center;color:#6f6259;font-size:.88rem}
+
+    .faq-wrap{max-width:900px;margin-inline:auto}
+    .faq-block{padding:26px 28px}
+    details{border-bottom:1px solid #eadccd;padding:14px 0}
+    details:last-child{border-bottom:none}
+    summary{list-style:none;cursor:pointer;font-weight:800;position:relative;padding:6px 34px 6px 0}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:'+';position:absolute;right:6px;top:-2px;font-size:1.8rem;color:var(--orange)}
+    details[open] summary::after{content:'−'}
+    details p{margin:10px 0 0;color:#665a53}
+
+    .signup-card{padding:36px;background:linear-gradient(180deg,#fff,#fff8f0)}
+    .signup-card .preview-notice{padding:14px 16px;border-radius:16px;background:#fff4e8;border:1px solid #eed0aa;font-size:.84rem;color:#714a2c;margin-bottom:16px}
+    .field{margin-bottom:16px}
+    .field label{display:block;font-size:.85rem;font-weight:800;margin-bottom:7px}
+    .field input,.field select{width:100%;min-height:49px;padding:12px 14px;border:1px solid #d8cabd;border-radius:12px;background:#fff;color:var(--brown)}
+    .consent{display:flex;gap:10px;align-items:flex-start;font-size:.84rem;line-height:1.6;color:#61564f;margin:12px 0 20px}
+    .consent input{width:18px;height:18px;accent-color:var(--orange);margin-top:4px;flex:none}
+    .form-message{min-height:24px;font-size:.84rem;font-weight:700;margin-top:12px}
+    .form-message.error{color:#b33e1d}.form-message.success{color:#287246}
+    .google-form-frame{display:none;width:100%;min-height:760px;border:none;border-radius:18px;background:#fff}
+    .google-form-frame.enabled{display:block}
+    .mock-form-hidden{display:none}
+
+    .footer{padding:34px 0 110px;background:#2f0822;color:#fff}
+    .footer-grid{display:grid;grid-template-columns:1.15fr .85fr .8fr;gap:24px;align-items:start}
+    .footer .brand{margin-bottom:10px}
+    .footer .brand-title,.footer .brand-sub,.footer p,.footer a{color:rgba(255,255,255,.82)}
+    .footer-title{font-weight:800;color:#fff;margin-bottom:10px}
+    .footer .small{font-size:.82rem;color:rgba(255,255,255,.7)}
+    .footer-bottom{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:.82rem;color:rgba(255,255,255,.72)}
+    .share-line{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+    .share-line button{background:#fff;color:var(--plum);border:0;border-radius:999px;padding:10px 15px;font-weight:800}
+    .share-line small{color:rgba(255,255,255,.75)}
+    .dialog{border:none;border-radius:20px;padding:26px;width:min(560px,calc(100% - 28px));box-shadow:0 30px 80px rgba(0,0,0,.28)}
+    .dialog::backdrop{background:rgba(0,0,0,.38)}
+    .dialog-close{position:absolute;top:10px;right:12px;border:0;background:none;font-size:1.8rem;color:#5e5148}
+
+    .mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:999;padding:12px 16px;background:linear-gradient(180deg,rgba(252,246,238,0),rgba(252,246,238,.94) 22%,rgba(252,246,238,.98) 100%)}
+    .mobile-cta .btn{width:100%}
+
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+    @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none} .btn,.taste-item,.layer{transition:none} html{scroll-behavior:auto}}
+
+    @media (max-width: 1080px){
+      .hero-grid,.story-grid,.product-grid,.signup-grid,.taste-grid,.trace-grid,.product-hero-grid{grid-template-columns:1fr}
+      .hero-side{min-height:680px;max-width:620px;margin-inline:auto;width:100%}
+      .identity-card{grid-template-columns:1fr}
+      .identity-item{border-right:none!important;border-bottom:1px solid var(--line)}
+      .identity-item:last-child{border-bottom:none}
+      .timeline{grid-template-columns:repeat(4,1fr)}
+      .cards-3,.quotes{grid-template-columns:repeat(2,1fr)}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 860px){
+      .nav-links{position:fixed;top:84px;left:20px;right:20px;display:none;flex-direction:column;align-items:flex-start;padding:18px;background:#fff;border-radius:20px;box-shadow:var(--shadow)}
+      .nav-links.open{display:flex}
+      .menu-toggle{display:block}
+      .brand-title{font-size:.95rem}
+      .hero{padding-top:18px}
+      .hero-side{min-height:610px}
+      .hero-product{position:relative;top:auto;right:auto;width:100%}
+      .score-card{left:12px;top:14px}
+      .mini-cut{left:auto;right:12px;bottom:108px;width:150px}
+      .hero-note{left:12px;right:12px;bottom:10px;max-width:none}
+      .story-points,.feedback-grid,.metrics{grid-template-columns:1fr}
+      .cards-3,.quotes,.footer-grid{grid-template-columns:1fr}
+      .timeline{grid-template-columns:repeat(2,1fr)}
+      .mini-gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width: 560px){
+      .container{width:min(var(--max),calc(100% - 28px))}
+      .section{padding:72px 0}
+      .nav-row{min-height:78px}
+      .brand img{width:48px;height:48px}
+      .hero-grid{gap:24px}
+      .hero-badges span{font-size:.78rem}
+      .hero-side{min-height:520px}
+      .score-card{width:170px;padding:14px 12px}
+      .score-card .big{font-size:1.7rem}
+      .mini-cut{width:120px;bottom:126px}
+      .image-card.tall{min-height:370px}
+      .gallery-card{padding:12px;gap:10px}
+      .gallery-card .main-shot{min-height:240px}
+      .gallery-card .sub-shot{min-height:130px}
+      .content-card,.trace-block,.source-block,.signup-card{padding:24px 20px}
+      .timeline{grid-template-columns:1fr}
+      .stats-grid{grid-template-columns:1fr}
+      .mini-gallery{grid-template-columns:1fr 1fr}
+      .mobile-cta{display:block}
+      .footer{padding-bottom:118px}
+    }
+  
+
+/* ROOT&TWIST · BẢN DÀNH CHO CUỘC THI */
+:root{--max:1220px}
+body{background:#fffdf9}
+.site-header{box-shadow:0 6px 24px rgba(52,10,37,.07)}
+.hero{padding-bottom:104px;background:radial-gradient(ellipse at 84% 8%,rgba(239,172,108,.19),transparent 42%),radial-gradient(ellipse at 0% 90%,rgba(200,126,88,.13),transparent 44%),linear-gradient(145deg,#6a1a4b 0%,#420b31 85%)}
+.hero:before{content:'ROOT • TWIST • FOOD';position:absolute;right:-5%;bottom:8%;font-weight:800;letter-spacing:.2em;white-space:nowrap;font-size:clamp(3rem,8vw,9rem);color:rgba(255,255,255,.026);pointer-events:none}
+.hero-product{aspect-ratio:4/4.8;object-fit:cover;object-position:center 20%;border:10px solid rgba(255,246,235,.1);border-radius:45% 45% 26px 26px;right:18px;max-height:600px}
+.hero-side{min-height:650px}
+.score-card{z-index:4;top:28px;left:-5px;width:205px;background:#fffaf1;transform:rotate(-7deg);border:1px solid #e8d2b0}
+.score-card .big{font-size:2.3rem}
+.mini-cut{z-index:4;left:0;bottom:36px;width:194px;border:5px solid #fff}
+.hero-note{z-index:4;right:-8px;bottom:1px;max-width:248px}
+.hero-badges span{border-color:rgba(255,220,165,.3)}
+.identity-card{border:1px solid #f1e2d4}
+.section{position:relative}
+#san-pham .section-head h2,#ba-tang-vi .section-head h2{max-width:800px;margin-inline:auto}
+.gallery-card .main-shot img{object-position:center 43%}
+.gallery-card .sub-shot img{transition:transform .5s ease}
+.gallery-card .sub-shot:hover img{transform:scale(1.05)}
+.product-summary{background:radial-gradient(circle at 100% 0%,#fff1dc,transparent 45%),linear-gradient(180deg,#fffdfa,#fff8ee)}
+.product-summary h2{font-size:clamp(2.1rem,3.5vw,3.25rem)}
+.metric{padding:16px 8px}
+.metric strong{font-size:clamp(1.1rem,1.8vw,1.48rem)}
+#cau-chuyen .image-card{border:12px solid white}
+#cau-chuyen .image-card img{aspect-ratio:4/5;object-fit:cover}
+#ba-tang-vi{background:linear-gradient(145deg,#fffdfa,#fff6e9)}
+#ba-tang-vi .taste-visual{border:1px solid #ecd7bf}
+#nghien-cuu .stat-card:nth-child(1){background:linear-gradient(145deg,#55133e,#7b2b5c);color:white}
+#nghien-cuu .stat-card:nth-child(1) .num,#nghien-cuu .stat-card:nth-child(1) .label{color:white}
+#nguon-goc .trace-item{background:#fffdfa}
+#nguon-goc .mini-gallery figure{transition:transform .2s ease,box-shadow .2s ease}
+#nguon-goc .mini-gallery figure:hover{transform:translateY(-3px);box-shadow:0 15px 30px rgba(59,42,30,.1)}
+#dang-ky{background:radial-gradient(ellipse at 0% 0%,rgba(217,164,65,.25),transparent 42%),linear-gradient(145deg,#58143f,#340924)}
+#dang-ky h2{max-width:560px}
+.footer{background:#26061c}
+@media(max-width:860px){.hero-product{position:relative;right:auto;top:0;width:100%;aspect-ratio:5/4.6;object-fit:cover}.hero-side{min-height:560px}.score-card{top:8px;left:0}.mini-cut{left:10px;bottom:65px}.hero-note{right:8px;bottom:8px}}
+@media(max-width:560px){.hero{padding-bottom:90px}.hero-side{min-height:530px}.hero-product{aspect-ratio:4/4.6}.score-card{width:145px;padding:10px;top:8px;left:2px}.score-card .big{font-size:1.6rem}.score-card .tiny-head,.score-card .mini{font-size:.67rem}.mini-cut{width:115px;bottom:124px}.hero-note{padding:13px;right:4px;left:4px;bottom:0;max-width:none}.hero-note p{font-size:.72rem}.hero h1{font-size:clamp(2.45rem,11.2vw,3.45rem)}.identity-card{padding:12px 19px}}
+
+/* Lần nghiệm thu cuối: không che sản phẩm bằng thẻ thống kê; tối ưu bố cục trên di động. */
+.hero-side{isolation:isolate}
+.hero-product{object-fit:cover;aspect-ratio:4/5;max-height:610px}
+.score-card{z-index:3;left:-14px;top:10px;transform:rotate(-3deg)}
+.mini-cut{z-index:2;bottom:12px;left:-20px;max-width:160px}
+.hero-note{z-index:2;right:-10px;bottom:14px;max-width:230px}
+.story-points{grid-template-columns:repeat(2,1fr)}
+.story-grid .content-card{box-shadow:none;padding:22px 10px}
+#ba-tang-vi{background:linear-gradient(180deg,#fffaf4 0%,#fff 100%)}
+#san-pham .metrics{grid-template-columns:repeat(2,1fr)}
+#nghien-cuu .stats-grid{grid-template-columns:1fr;max-width:340px;margin-inline:auto}
+#nghien-cuu .stat-card{text-align:center}
+#cam-quan{padding-top:64px}
+@media(max-width:1080px){
+.hero-grid{grid-template-columns:1fr 1fr;gap:24px}.hero-side{min-height:570px}.hero-product{max-height:550px}
+}
+@media(max-width:860px){
+.hero-grid{grid-template-columns:1fr}.hero-side{max-width:570px;min-height:auto;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}.hero-product{position:static;grid-column:1/-1;aspect-ratio:4/3;object-fit:cover;border-radius:25px;max-height:none}.floating-card{position:static;transform:none}.score-card{grid-column:1;grid-row:2;width:auto}.mini-cut{grid-column:2;grid-row:2;width:auto;max-width:none}.hero-note{grid-column:1/-1;max-width:none}.mini-cut img{max-height:132px;width:100%;object-fit:cover}
+}
+@media(max-width:560px){
+.hero{padding-bottom:54px}.hero-side{display:grid;min-height:auto}.hero-product{aspect-ratio:1/1;max-height:none}.score-card{padding:12px}.score-card .tiny-head{font-size:.73rem}.score-card .mini{font-size:.71rem}.hero-note{padding:15px}.story-points{grid-template-columns:1fr}.story-grid .content-card{padding:8px 0}.product-summary{padding:24px 20px}.gallery-card .main-shot img{object-position:center}.timeline{grid-template-columns:repeat(2,1fr)}.step{min-height:165px}.hero h1{font-size:clamp(2.4rem,11vw,3.25rem)}
+}
+</style>
+<meta content="images/banh-chinh.jpg" property="og:image"/></head>
+<body>
+<header class="site-header">
+<div class="container nav-row">
+<a aria-label="Root&amp;Twist Foods" class="brand" href="#top">
+<img alt="Logo Root&amp;Twist Foods" decoding="async" height="1024" loading="lazy" src="images/logo-root-twist.jpg" width="1024"/>
+<span class="brand-copy">
+<span class="brand-title">Root&amp;Twist Foods</span>
+<span class="brand-sub">Phát triển bởi NextGen Food · DHTP18A</span>
+</span>
+</a>
+<button aria-controls="siteMenu" aria-expanded="false" aria-label="Mở menu" class="menu-toggle" id="menuToggle" type="button">
+<svg aria-hidden="true" fill="none" height="22" viewbox="0 0 24 24" width="22"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+</button>
+<nav aria-label="Điều hướng chính" class="nav-links" id="siteMenu">
+<a href="#san-pham">Sản phẩm</a>
+<a href="#ba-tang-vi">Ba tầng vị</a>
+<a href="#nghien-cuu">Nghiên cứu</a>
+<a href="#nguon-goc">Nguồn gốc</a>
+<a href="#hoi-dap">Hỏi đáp</a>
+<a class="btn btn-primary" href="#dang-ky">Liên hệ nếm thử</a>
+</nav>
+</div>
+</header>
+<main id="top">
+<section aria-labelledby="hero-title" class="hero">
+<div class="container hero-grid">
+<div class="reveal">
+<p class="eyebrow">BÁNH KHOAI LANG KATAIFI CARAMEL MẶN</p>
+<h1 id="hero-title">Nâng tầm nông sản Việt bằng chuẩn mực hiện đại</h1>
+<p class="lead">Mềm dẻo – Đắng nhẹ – Giòn rụm. Ba tầng vị trong một miếng cắn, từ củ khoai quê nhà.</p>
+<div aria-label="Điểm nổi bật của sản phẩm" class="hero-badges">
+<span>70% khoai lang trong công thức</span>
+<span>30 g/bánh · 6 bánh/hộp</span>
+<span>Dự án đang thử nghiệm, chưa kinh doanh</span>
+</div>
+<div class="actions">
+<a class="btn btn-primary" href="#dang-ky">Liên hệ nếm thử</a>
+<a class="btn btn-outline" href="#cau-chuyen">Khám phá câu chuyện</a>
+</div>
+</div>
+<div class="hero-side reveal">
+<div aria-label="Điểm yêu thích" class="floating-card score-card">
+<div class="tiny-head">Điểm yêu thích từ 60 người thử</div>
+<span class="big">7,37/9</span>
+<div class="mini">Điểm trung bình trên thang 9 điểm.</div>
+</div>
+<img alt="Bánh khoai lang Kataifi Caramel mặn và nguyên liệu" class="hero-product" decoding="async" fetchpriority="high" height="768" src="images/banh-chinh.jpg" width="1024"/>
+<div class="floating-card mini-cut">
+<img alt="Mặt cắt bánh cho thấy ba lớp cấu trúc" decoding="async" height="341" loading="lazy" src="images/mat-cat.jpg" width="594"/>
+</div>
+<div class="floating-card hero-note">
+<strong>Root&amp;Twist Foods</strong>
+<p>Dự án được phát triển bởi <b>NextGen Food</b> – Nhóm 2, Tổ 4, lớp DHTP18A, Viện Công nghệ Sinh học và Thực phẩm, Đại học Công nghiệp TP.HCM.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="product-showcase-title" class="section" id="san-pham">
+<div class="container">
+<div class="section-head centered center reveal">
+<p class="eyebrow">SẢN PHẨM NỔI BẬT</p>
+<h2 id="product-showcase-title">Chạm vị quê nhà. Khám phá điều mới.</h2>
+<p class="lead">Một chiếc bánh lấy cảm hứng từ củ khoai thân thuộc, kết hợp hình thức bánh ngọt hiện đại và nhân kataifi caramel mặn.</p>
+</div>
+<div class="product-hero-grid">
+<div aria-label="Bộ ảnh sản phẩm" class="gallery-card reveal">
+<div class="main-shot"><img alt="Ảnh chính của bánh khoai lang Kataifi Caramel mặn" decoding="async" height="768" loading="lazy" src="images/banh-chinh.jpg" width="1024"/></div>
+<div class="sub-shot"><img alt="Ảnh mặt cắt bánh khoai lang Kataifi Caramel mặn" decoding="async" height="341" loading="lazy" src="images/mat-cat.jpg" width="594"/></div>
+<div class="sub-shot"><img alt="Ảnh hộp bánh khoai lang Kataifi Caramel mặn" decoding="async" height="419" loading="lazy" src="images/hop-banh.jpg" width="771"/></div>
+</div>
+<div class="content-card product-summary reveal">
+<p class="eyebrow">ĐỊNH VỊ SẢN PHẨM</p>
+<h2>Bánh khoai lang Kataifi Caramel mặn</h2>
+<p class="lead">Vỏ khoai lang mềm dẻo, chocolate đắng nhẹ và nhân kataifi caramel mặn giòn rụm – ba cấu trúc, một trải nghiệm thưởng thức.</p>
+<div class="pill-row">
+<span class="pill">Mềm dẻo</span>
+<span class="pill">Đắng nhẹ</span>
+<span class="pill">Giòn rụm</span>
+<span class="pill">70% khoai lang</span>
+</div>
+<div class="metrics">
+
+<div class="metric"><strong>55 kcal</strong><span>Mỗi bánh 30 g</span></div>
+<div class="metric"><strong>58.000 đ</strong><span>Giá dự kiến / hộp</span></div>
+</div>
+</div>
+</div>
+</div>
+</section><section aria-labelledby="taste-title" class="section" id="ba-tang-vi">
+<div class="container">
+<div class="section-head centered center reveal">
+<p class="eyebrow">TRẢI NGHIỆM CỐT LÕI</p>
+<h2 id="taste-title">Ba tầng vị trong một miếng cắn</h2>
+<p class="lead">Chạm hoặc chọn từng lớp trong sơ đồ để khám phá cảm giác và hương vị bên trong chiếc bánh.</p>
+</div>
+<div class="taste-grid">
+<div class="taste-visual reveal">
+<svg aria-label="Sơ đồ mặt cắt bánh với ba tầng vị" class="taste-svg" role="img" viewbox="0 0 520 520">
+<title>Ba tầng vị của bánh khoai lang Kataifi Caramel mặn</title>
+<g aria-label="Chọn vỏ khoai lang" class="layer" data-layer="0" role="button" tabindex="0">
+<circle cx="260" cy="260" fill="#F2B25F" r="202"></circle>
+<circle cx="260" cy="260" fill="#FFF1DF" r="168"></circle>
+</g>
+<g aria-label="Chọn lớp chocolate" class="layer" data-layer="1" role="button" tabindex="0">
+<circle cx="260" cy="260" fill="#402318" r="143"></circle>
+<circle cx="260" cy="260" fill="#FFF1DF" r="112"></circle>
+</g>
+<g aria-label="Chọn nhân kataifi caramel mặn" class="layer" data-layer="2" role="button" tabindex="0">
+<circle cx="260" cy="260" fill="#D9A441" r="88"></circle>
+<g stroke="#f7e7c8" stroke-linecap="round" stroke-width="3.8">
+<path d="M206 228c28 14 43 33 60 55"></path>
+<path d="M248 207c4 36 6 68 2 107"></path>
+<path d="M292 218c-18 30-28 58-34 91"></path>
+<path d="M214 276c25-3 47-2 90 9"></path>
+<path d="M225 241c32 21 59 39 74 63"></path>
+<path d="M276 232c-12 25-12 49-10 78"></path>
+<path d="M232 202c18 27 22 53 21 86"></path>
+<path d="M302 252c-34 9-56 27-81 52"></path>
+</g>
+</g>
+<circle cx="260" cy="260" fill="none" r="222" stroke="#f5e3ce" stroke-width="16"></circle>
+</svg>
+<figure style="margin:22px 0 0;"><img alt="Mặt cắt bánh thật với vỏ khoai lang, lớp chocolate và nhân kataifi caramel mặn" decoding="async" height="341" loading="lazy" src="images/mat-cat.jpg" style="width:100%;border-radius:20px;" width="594"/></figure></div>
+<div class="reveal">
+<div class="taste-list">
+<article aria-pressed="false" class="taste-item" data-item="0" role="button" tabindex="0">
+<h3>Vỏ khoai lang – Mềm dẻo</h3>
+<p>Ngọt bùi tự nhiên của khoai lang hấp, tạo nên lớp ngoài êm, dẻo và mang bản sắc rõ nhất của sản phẩm.</p>
+</article>
+<article aria-pressed="false" class="taste-item" data-item="1" role="button" tabindex="0">
+<h3>Chocolate – Đắng nhẹ</h3>
+<p>Lớp chuyển tiếp giúp cân bằng vị giác, nối phần ngọt bùi của khoai với phần nhân giòn bên trong.</p>
+</article>
+<article aria-pressed="false" class="taste-item" data-item="2" role="button" tabindex="0">
+<h3>Nhân kataifi – caramel mặn – Giòn rụm</h3>
+<p>Sợi kataifi nướng giòn quyện caramel mặn ngọt đan xen, tạo độ tương phản cấu trúc rõ rệt khi cắn.</p>
+</article>
+</div>
+<div class="taste-note">Không chỉ mềm như bánh khoai quen thuộc, mà là <b>mềm ôm giòn</b>, nơi vị ngọt gặp vị mặn trong một cấu trúc nhiều lớp.</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="story-title" class="section bg-cream" id="cau-chuyen">
+<div class="container story-grid">
+<div class="image-card tall reveal">
+<img alt="Khoai lang Nhật dùng làm nguyên liệu chính" decoding="async" height="500" loading="lazy" src="images/khoai-lang-nhat.jpg" width="500"/>
+</div>
+<div class="content-card reveal">
+<p class="eyebrow">CÂU CHUYỆN THƯƠNG HIỆU</p>
+<h2 id="story-title">Bắt đầu từ một củ khoai, nhưng không dừng ở một chiếc bánh quen thuộc</h2>
+<p>Củ khoai lang là ký ức tuổi thơ của nhiều người Việt: củ khoai nướng ngày mưa, nồi khoai luộc buổi sáng, vị ngọt bùi mộc mạc và gần gũi. Tuy nhiên, khi chỉ bán dưới dạng củ tươi, giá trị mà khoai lang mang lại thường chưa tương xứng với công sức canh tác.</p>
+<p>NextGen Food chọn cách kể lại nguyên liệu này bằng ngôn ngữ của bánh ngọt hiện đại. Không làm mất đi chất quê nhà, mà chuyển hóa nó thành trải nghiệm mới: vỏ khoai lang mềm dẻo ôm lấy lớp chocolate đắng nhẹ và nhân kataifi caramel mặn giòn rụm.</p>
+<div class="story-points">
+<div class="story-point"><strong>Cho người trẻ</strong><p>Một món ăn vặt dễ tiếp cận, dễ chia sẻ, dễ nhớ hương vị.</p></div>
+<div class="story-point"><strong>Cho nông sản Việt</strong><p>Khoai lang chiếm 70% công thức, giúp câu chuyện nguyên liệu trở thành trung tâm.</p></div>
+<div class="story-point"><strong>Cho đổi mới</strong><p>Quá trình lựa chọn công thức được xây dựng từ các thí nghiệm phát triển sản phẩm.</p></div>
+<div class="story-point"><strong>Cho nghiên cứu</strong><p>Các dữ liệu thử nghiệm và đánh giá cảm quan tạo cơ sở cho định hướng phát triển.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="why-title" class="section bg-cream" id="gia-tri">
+<div class="container">
+<div class="section-head centered center reveal">
+<p class="eyebrow">GIÁ TRỊ NỔI BẬT</p>
+<h2 id="why-title">Một chiếc bánh nhỏ, ba lớp giá trị lớn</h2>
+</div>
+<div class="cards-3">
+<article class="tile reveal"><div class="icon">◎</div><h3>Cho con người</h3><p>Niềm vui nhỏ giữa ngày bận rộn, khoảng 55 kcal mỗi bánh, giá vừa túi tiền người trẻ và tiếp sức cho sinh viên Việt sáng tạo.</p></article>
+<article class="tile reveal"><div class="icon">◌</div><h3>Cho cộng đồng</h3><p>Khoai lang chiếm 70% công thức, giúp giữ hương vị quê nhà trong một món ăn vặt của thế hệ trẻ.</p></article>
+<article class="tile reveal"><div class="icon">✦</div><h3>Cho kinh tế</h3><p>Định hướng phát triển sản phẩm chế biến từ khoai lang có thể mở thêm cơ hội tiêu thụ nguyên liệu và gia tăng giá trị ở quy mô sản xuất nhỏ.</p></article>
+</div>
+<div class="content-card centered center reveal" style="margin-top:28px;background:#fff7ee;border:1px solid #efdcc6;">
+<h3 style="margin-bottom:8px;">Mỗi chiếc bánh được phát triển là một cách nhìn mới về giá trị của củ khoai Việt.</h3>
+</div>
+</div>
+</section>
+<section aria-labelledby="research-title" class="section" id="nghien-cuu">
+<div class="container">
+<div class="section-head centered center reveal">
+<p class="eyebrow">NỀN TẢNG NGHIÊN CỨU</p>
+<h2 id="research-title">Bảy thí nghiệm. Một công thức được lựa chọn.</h2>
+<p class="lead">Từ lựa chọn giống khoai, phối trộn vỏ đến cân bằng nhân caramel – kataifi: mỗi quyết định phát triển sản phẩm đều được khảo sát trong quá trình nghiên cứu.</p>
+</div>
+<div class="stats-grid">
+
+
+
+<div class="stat-card reveal"><span class="num">7 + 1</span><span class="label">7 thí nghiệm phát triển và 1 đánh giá thị hiếu</span></div>
+</div>
+<div class="content-card reveal" style="margin-top:28px;">
+<p class="eyebrow">CHUẨN MỰC HIỆN ĐẠI</p>
+<h3>Nguyên liệu hiện đại là một vế, tỷ lệ được kiểm chứng bằng thí nghiệm là vế còn lại</h3>
+<p class="muted">Kataifi tạo độ giòn rụm, caramel mặn tạo điểm nhấn mặn ngọt đan xen, chocolate đen tạo lớp đắng nhẹ. Nhưng chỉ khi đi cùng quá trình tối ưu công thức, cả ba mới trở thành bản sắc sản phẩm.</p>
+<div aria-label="Bảy thí nghiệm cho một chiếc bánh" class="timeline">
+<div class="step"><strong>1</strong><p>Giống khoai: <b>khoai lang Nhật</b>.</p></div>
+<div class="step"><strong>2</strong><p>Phối trộn vỏ: dùng <b>nước nóng</b>.</p></div>
+<div class="step"><strong>3</strong><p>Bột năng : bột nếp = <b>12 : 5</b>.</p></div>
+<div class="step"><strong>4</strong><p><b>Xanthan gum 0,5%</b> – tỷ lệ bọc nhân thành công tăng từ 30% lên 80%.</p></div>
+<div class="step"><strong>5</strong><p>Caramel : kataifi = <b>60 : 40</b>.</p></div>
+<div class="step"><strong>6</strong><p>Vỏ : nhân = <b>4 : 1</b>.</p></div>
+<div class="step"><strong>7</strong><p>Hấp <b>18 phút ở 95 °C</b>.</p></div>
+</div>
+</div>
+<div class="chart-card reveal">
+<div class="chart-title">So sánh điểm yêu thích của ba mẫu</div>
+<svg aria-label="Biểu đồ cột so sánh điểm yêu thích của ba mẫu bánh" role="img" viewbox="0 0 760 420">
+<line stroke="#b8a99c" stroke-width="2" x1="82" x2="82" y1="28" y2="338"></line>
+<line stroke="#b8a99c" stroke-width="2" x1="82" x2="708" y1="338" y2="338"></line>
+<g fill="#6e6259" font-family="Be Vietnam Pro, sans-serif" font-size="14">
+<text x="58" y="340">0</text>
+<text x="58" y="306">1</text>
+<text x="58" y="272">2</text>
+<text x="58" y="238">3</text>
+<text x="58" y="204">4</text>
+<text x="58" y="170">5</text>
+<text x="58" y="136">6</text>
+<text x="58" y="102">7</text>
+<text x="58" y="68">8</text>
+<text x="58" y="34">9</text>
+</g>
+<g stroke="#ece0d4" stroke-width="1">
+<line x1="82" x2="708" y1="304" y2="304"></line>
+<line x1="82" x2="708" y1="270" y2="270"></line>
+<line x1="82" x2="708" y1="236" y2="236"></line>
+<line x1="82" x2="708" y1="202" y2="202"></line>
+<line x1="82" x2="708" y1="168" y2="168"></line>
+<line x1="82" x2="708" y1="134" y2="134"></line>
+<line x1="82" x2="708" y1="100" y2="100"></line>
+<line x1="82" x2="708" y1="66" y2="66"></line>
+</g>
+<g>
+<rect fill="#E07B24" height="250.47" rx="20" width="130" x="130" y="87.53"></rect>
+<rect fill="#C9C3BC" height="194.48" rx="20" width="130" x="330" y="143.52"></rect>
+<rect fill="#C9C3BC" height="157.08" rx="20" width="130" x="530" y="180.92"></rect>
+<text fill="#52143e" font-family="Lora, serif" font-size="28" font-weight="700" text-anchor="middle" x="195" y="76">7,37</text>
+<text fill="#66584d" font-family="Lora, serif" font-size="22" font-weight="700" text-anchor="middle" x="395" y="132">5,72</text>
+<text fill="#66584d" font-family="Lora, serif" font-size="22" font-weight="700" text-anchor="middle" x="595" y="169">4,62</text>
+</g>
+<g fill="#5d534d" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="700">
+<text text-anchor="middle" x="195" y="365">Bánh khoai lang</text>
+<text text-anchor="middle" x="195" y="386">Kataifi Caramel mặn</text>
+<text text-anchor="middle" x="395" y="365">Bánh mochi</text>
+<text text-anchor="middle" x="395" y="386">nhân đậu đỏ</text>
+<text text-anchor="middle" x="595" y="365">Bánh gạo</text>
+<text text-anchor="middle" x="595" y="386">tokbokki</text>
+</g>
+</svg>
+<div class="chart-caption">60 người thử, thang 9 điểm. Khác biệt có ý nghĩa thống kê.</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="trace-title" class="section bg-cream" id="nguon-goc">
+<div class="container">
+<div class="section-head centered center reveal">
+<p class="eyebrow">NGUYÊN LIỆU ĐẦU VÀO &amp; TRUY XUẤT</p>
+<h2 id="trace-title">Từ vùng trồng Bình Tân, Vĩnh Long đến cấu trúc ba tầng vị</h2>
+<p class="lead">Khoai lang Nhật từ Bình Tân, Vĩnh Long là nền tảng cho câu chuyện sản phẩm. Nguyên liệu phụ trợ được lựa chọn và đối chiếu theo thông tin nhãn.</p>
+</div>
+<div class="trace-grid">
+<div class="trace-block reveal">
+<h3>Hồ sơ đầu vào chính</h3>
+<div class="trace-list">
+<div class="trace-item"><strong>Vùng trồng khoai lang</strong><p>Bình Tân, Vĩnh Long.</p></div>
+<div class="trace-item"><strong>Nhà cung cấp khoai lang</strong><p>T&amp;B Fresh Farm.</p></div>
+<div class="trace-item"><strong>Tỷ lệ khoai lang trong công thức</strong><p>70%.</p></div>
+<div class="trace-item"><strong>Nhân caramel mặn</strong><p>Được phối từ whipping cream, đường, bơ và muối.</p></div>
+<div class="trace-item"><strong>Đối tác/xưởng gia công được nhóm cung cấp thông tin</strong><p>Theo thông tin do nhóm cung cấp, xưởng có HACCP và ISO 22000. Chưa có chứng từ đính kèm để kiểm tra phạm vi và hiệu lực; đây không phải chứng nhận của sản phẩm.</p></div>
+</div>
+</div>
+<div class="source-block reveal">
+<h3>Bộ nguyên liệu minh họa thực tế</h3>
+<p class="muted">Hình ảnh các nguyên liệu và nhãn hàng do nhóm cung cấp để giới thiệu thành phần được sử dụng trong quá trình phát triển.</p>
+<div class="mini-gallery">
+<figure><img alt="Khoai lang Nhật" decoding="async" height="500" loading="lazy" src="images/khoai-lang-nhat.jpg" width="500"/><figcaption>Khoai lang Nhật</figcaption></figure>
+<figure><img alt="Sợi kataifi" decoding="async" height="466" loading="lazy" src="images/kataifi-thuc-te.jpg" width="699"/><figcaption>Sợi kataifi</figcaption></figure>
+<figure><img alt="Chocolate đen" decoding="async" height="623" loading="lazy" src="images/chocolate-thuc-te.jpg" width="520"/><figcaption>Chocolate đen</figcaption></figure>
+<figure><img alt="Đường tinh luyện" decoding="async" height="447" loading="lazy" src="images/duong-thuc-te.jpg" width="447"/><figcaption>Đường tinh luyện</figcaption></figure>
+<figure><img alt="Muối" decoding="async" height="684" loading="lazy" src="images/muoi-thuc-te.jpg" width="912"/><figcaption>Muối</figcaption></figure>
+<figure><img alt="Whipping cream" decoding="async" height="593" loading="lazy" src="images/kem-thuc-te.jpg" width="593"/><figcaption>Whipping cream</figcaption></figure>
+<figure><img alt="Bơ lạt" decoding="async" height="541" loading="lazy" src="images/bo-thuc-te.jpg" width="541"/><figcaption>Bơ lạt</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="product-title" class="section" id="thong-tin">
+<div class="container product-grid">
+<div class="image-card medium reveal">
+<img alt="Hộp bánh khoai lang Kataifi Caramel mặn Root&amp;Twist" decoding="async" height="419" loading="lazy" src="images/hop-banh.jpg" width="771"/>
+</div>
+<div class="content-card reveal">
+<p class="eyebrow">THÔNG TIN SẢN PHẨM</p>
+<h2 id="product-title">Gọn trong một hộp, trọn vẹn ba tầng vị</h2>
+<p class="info-line">30 g/bánh · 6 bánh/hộp · Giá dự kiến 58.000 đ/hộp</p>
+<p>Gợi ý sử dụng: ngon nhất khi dùng liền sau khi mở bao bì; dùng kèm trà hoặc cà phê. Sản phẩm đang trong giai đoạn thử nghiệm, chưa kinh doanh.</p>
+<table aria-describedby="nutritionNote" class="nutrition">
+<caption>Giá trị dinh dưỡng ước tính / 1 bánh 30 g</caption>
+<tr><th>Năng lượng</th><td>55 kcal</td></tr>
+<tr><th>Carbohydrat</th><td>10,3 g</td></tr>
+<tr><th>Đường</th><td>3,2 g</td></tr>
+<tr><th>Chất béo</th><td>1,3 g</td></tr>
+<tr><th>Béo bão hòa</th><td>0,75 g</td></tr>
+<tr><th>Protein</th><td>0,5 g</td></tr>
+<tr><th>Natri</th><td>55 mg</td></tr>
+</table>
+<p class="note" id="nutritionNote">Giá trị tính toán từ công thức.</p>
+<p><strong>Thành phần:</strong> khoai lang, bột năng, bột nếp, kataifi, caramel mặn (đường, kem, bơ, muối), chocolate đen, xanthan gum, kali sorbat.</p>
+<div class="allergy"><strong>Dị ứng:</strong> có lúa mì, sữa. Thành phần dị ứng cần tiếp tục đối chiếu đầy đủ theo nhãn nguyên liệu chocolate và kem khi công bố chính thức.</div>
+<div class="actions" style="margin-top:20px;"><a class="btn btn-primary" href="#dang-ky">Liên hệ nếm thử</a></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="feedback-title" class="section bg-cream" id="cam-quan">
+<div class="container">
+<div class="section-head centered center reveal">
+<p class="eyebrow">NGƯỜI THỬ NÓI GÌ</p>
+<h2 id="feedback-title">Điểm yêu thích từ buổi đánh giá cảm quan</h2>
+</div>
+<div class="feedback-grid">
+<div class="feedback-box reveal"><strong>Cứ 2 người nếm thử,<br/>1 người chấm 8–9 điểm</strong><span>Kết quả đánh giá cảm quan theo dữ liệu nhóm cung cấp.</span></div>
+<div class="feedback-box reveal"><strong>91,7% người thử<br/>chấm từ 6 điểm trở lên</strong><span>Tỷ lệ điểm từ buổi đánh giá cảm quan.</span></div>
+</div>
+<p class="note center">Chưa công bố nhận xét định tính cá nhân; kết quả được trình bày bằng số liệu tổng hợp từ nghiên cứu.</p>
+</div>
+</section>
+<section aria-labelledby="faq-title" class="section" id="hoi-dap">
+<div class="container faq-wrap reveal">
+<div class="section-head centered center">
+<p class="eyebrow">HỎI ĐÁP</p>
+<h2 id="faq-title">Những câu hỏi thường gặp</h2>
+</div>
+<div class="faq-block">
+<details><summary>Bánh giữ giòn được bao lâu?</summary><p>Độ giòn của nhân kataifi có thể thay đổi theo điều kiện bảo quản; nên thưởng thức sớm sau khi mở bao bì để cảm nhận rõ cấu trúc.</p></details>
+<details><summary>Bánh có chất gây dị ứng không?</summary><p>Có lúa mì (kataifi) và sữa (bơ).</p></details>
+<details><summary>Bảo quản thế nào?</summary><p>Bảo quản nơi khô ráo, thoáng mát, tránh nắng vì chocolate dễ chảy.</p></details>
+<details><summary>Khoai lang lấy từ đâu?</summary><p>Khoai lang Nhật được giới thiệu có nguồn từ Bình Tân, Vĩnh Long, qua đơn vị T&amp;B Fresh Farm.</p></details>
+<details><summary>Khi nào có thể mua?</summary><p>Sản phẩm đang trong giai đoạn thử nghiệm. Đăng ký để được thông báo khi nhóm mở hoạt động nếm thử hoặc công bố giai đoạn tiếp theo.</p></details>
+</div>
+</div>
+</section>
+<section aria-labelledby="signup-title" class="section bg-plum" id="dang-ky">
+<div class="container signup-grid">
+<div class="reveal">
+<p class="eyebrow">ĐĂNG KÝ NẾM THỬ</p>
+<h2 id="signup-title">Nếm thử ba tầng vị và cho chúng tôi biết cảm nhận</h2>
+<p class="lead">Sản phẩm đang trong giai đoạn thử nghiệm. Bạn có thể liên hệ với NextGen Food để tìm hiểu về kế hoạch nếm thử và các bước phát triển tiếp theo.</p>
+<div class="content-card" style="background:rgba(255,255,255,.08);box-shadow:none;border:1px solid rgba(255,255,255,.12);color:#fff;margin-top:24px;">
+<h3 style="margin-bottom:10px;">Thông tin liên hệ hiện có</h3>
+<p style="margin-bottom:8px;">Email: <a href="mailto:Root%26Twist@gmail.com" style="color:#fff;text-decoration:underline;">Root&amp;Twist@gmail.com</a></p>
+<p style="margin-bottom:0;">Số điện thoại: <a href="tel:0708034591" style="color:#fff;text-decoration:underline;">0708 034 591</a></p>
+</div>
+</div>
+<div class="signup-card reveal" id="formShell"><h3>Liên hệ nhóm để tìm hiểu về buổi nếm thử</h3><p>Hiện chưa mở biểu mẫu đăng ký trực tuyến. Nhóm tiếp nhận yêu cầu trao đổi qua email hoặc số điện thoại công khai bên dưới.</p><div class="actions"><a class="btn btn-primary" href="mailto:Root%26Twist@gmail.com?subject=Quan%20t%C3%A2m%20bu%E1%BB%95i%20n%E1%BA%BFm%20th%E1%BB%AD%20Root%26Twist">Gửi email cho nhóm</a><a class="btn btn-ghost" href="tel:0708034591">Gọi 0708 034 591</a></div><p class="note" style="margin-top:20px">Website không thu thập hoặc lưu thông tin cá nhân trực tuyến. Mọi thông tin trao đổi qua email/điện thoại cần được xử lý theo mục đích liên hệ về buổi nếm thử.</p></div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="brand">
+<img alt="Logo Root&amp;Twist Foods ở chân trang" decoding="async" height="1024" loading="lazy" src="images/logo-root-twist.jpg" width="1024"/>
+<span class="brand-copy">
+<span class="brand-title" style="color:#fff;">Root&amp;Twist Foods</span>
+<span class="brand-sub" style="color:rgba(255,255,255,.76);">Nâng tầm nông sản Việt bằng chuẩn mực hiện đại</span>
+</span>
+</div>
+<p>Nhóm thực hiện: <b>NextGen Food</b> – Nhóm 2, Tổ 4, lớp DHTP18A, Viện Công nghệ Sinh học và Thực phẩm, Đại học Công nghiệp TP.HCM.</p>
+<p class="small">Dự án sinh viên – sản phẩm đang trong giai đoạn thử nghiệm, chưa kinh doanh.</p>
+</div>
+<div>
+<div class="footer-title">Liên hệ</div>
+<p><a href="mailto:Root%26Twist@gmail.com">Root&amp;Twist@gmail.com</a></p>
+<p><a href="tel:0708034591">0708 034 591</a></p>
+<p class="small">Kênh mạng xã hội và website riêng: hiện chưa thiết lập.</p>
+</div>
+<div>
+<div class="footer-title">Sử dụng trang này</div>
+<p class="small">Chia sẻ website để khám phá câu chuyện sản phẩm và kết quả phát triển của nhóm.</p>
+<div class="share-line">
+<button id="sharePage" type="button">Chia sẻ liên kết</button>
+<small id="shareFeedback">Xuất bản website trước để chia sẻ đường dẫn.</small>
+</div>
+<p style="margin-top:12px;"><button id="privacyOpen" style="border:0;background:none;color:#fff;text-decoration:underline;text-underline-offset:4px;padding:0;font-weight:700;" type="button">Chính sách bảo mật thông tin</button></p>
+</div>
+</div>
+<div class="footer-bottom">Root&amp;Twist Foods · Dự án sinh viên do NextGen Food thực hiện · Sản phẩm đang thử nghiệm, chưa kinh doanh.</div>
+</div>
+</footer>
+<dialog aria-labelledby="privacyTitle" class="dialog" id="privacyDialog">
+<button aria-label="Đóng hộp thoại" class="dialog-close" id="privacyClose" type="button">×</button>
+<h2 id="privacyTitle">Chính sách bảo mật thông tin</h2>
+<p>Website hiện không có biểu mẫu thu thập dữ liệu trực tuyến. Nếu liên hệ qua email hoặc số điện thoại, thông tin bạn cung cấp chỉ nên được nhóm sử dụng để trao đổi về buổi nếm thử. Bạn có thể yêu cầu xóa thông tin bằng email liên hệ công khai.</p>
+<p class="note">Phiên bản hiện tại chưa gửi dữ liệu đến máy chủ và chưa thu thập đăng ký thật.</p>
+</dialog>
+<a aria-label="Đến phần đăng ký nếm thử" class="mobile-cta" href="#dang-ky">Liên hệ nếm thử</a>
+<script>
+    'use strict';
+    const menuToggle=document.getElementById('menuToggle');
+    const siteMenu=document.getElementById('siteMenu');
+    if(menuToggle&&siteMenu){
+      menuToggle.addEventListener('click',()=>{
+        const open=siteMenu.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded',String(open));
+        menuToggle.setAttribute('aria-label',open?'Đóng menu':'Mở menu');
+      });
+      siteMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+        siteMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+        menuToggle.setAttribute('aria-label','Mở menu');
+      }));
+    }
+
+    const svgLayers=[...document.querySelectorAll('.layer')];
+    const tasteItems=[...document.querySelectorAll('.taste-item')];
+    function selectLayer(index){
+      svgLayers.forEach((el,i)=>{el.classList.toggle('is-active',i===index);el.classList.toggle('is-dim',i!==index)});
+      tasteItems.forEach((el,i)=>{el.classList.toggle('is-active',i===index);el.setAttribute('aria-pressed',String(i===index));});
+    }
+    function bindLayer(el,key){
+      const activate=()=>selectLayer(Number(el.dataset[key]));
+      el.addEventListener('mouseenter',activate);
+      el.addEventListener('click',activate);
+      el.addEventListener('focus',activate);
+      el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();}});
+    }
+    svgLayers.forEach(el=>bindLayer(el,'layer'));
+    tasteItems.forEach(el=>bindLayer(el,'item'));
+    if(svgLayers.length) selectLayer(0);
+
+    const revealEls=document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window){
+      const observer=new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
+        });
+      },{threshold:.08});
+      revealEls.forEach(el=>observer.observe(el));
+    } else {revealEls.forEach(el=>el.classList.add('visible'));}
+
+    const privacyDialog=document.getElementById('privacyDialog');
+    document.getElementById('privacyOpen').addEventListener('click',()=>privacyDialog.showModal());
+    document.getElementById('privacyClose').addEventListener('click',()=>privacyDialog.close());
+    privacyDialog.addEventListener('click',e=>{if(e.target===privacyDialog)privacyDialog.close();});
+
+    const shareButton=document.getElementById('sharePage');
+    if(shareButton){
+      shareButton.addEventListener('click', async()=>{
+        const feedback=document.getElementById('shareFeedback');
+        if(location.protocol==='file:'){feedback.textContent='Hãy đưa website lên GitHub Pages trước khi chia sẻ.';return;}
+        try{
+          if(navigator.share){await navigator.share({title:document.title,url:location.href});feedback.textContent='Đã mở tùy chọn chia sẻ.';}
+          else if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(location.href);feedback.textContent='Đã sao chép liên kết.';}
+          else {feedback.textContent='Sao chép đường dẫn từ thanh địa chỉ trình duyệt.';}
+        }catch(e){if(e.name!=='AbortError') feedback.textContent='Không thể chia sẻ tự động, hãy sao chép đường dẫn từ trình duyệt.';}
+      });
+    }
+  </script>
+</body>
+</html>
