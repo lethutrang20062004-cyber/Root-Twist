@@ -357,6 +357,14 @@ body{background:#fffdf9}
 @media(max-width:560px){
 .hero{padding-bottom:54px}.hero-side{display:grid;min-height:auto}.hero-product{aspect-ratio:1/1;max-height:none}.score-card{padding:12px}.score-card .tiny-head{font-size:.73rem}.score-card .mini{font-size:.71rem}.hero-note{padding:15px}.story-points{grid-template-columns:1fr}.story-grid .content-card{padding:8px 0}.product-summary{padding:24px 20px}.gallery-card .main-shot img{object-position:center}.timeline{grid-template-columns:repeat(2,1fr)}.step{min-height:165px}.hero h1{font-size:clamp(2.4rem,11vw,3.25rem)}
 }
+
+/* Hiệu chỉnh sau thẩm định thiết kế */
+#san-pham #product-showcase-title{max-width:1000px;margin:0 auto 18px;font-size:clamp(1.88rem,4vw,3.3rem);line-height:1.22;letter-spacing:-.025em;text-wrap:balance}
+#san-pham #product-showcase-title span{display:block}
+#san-pham .section-head{max-width:1000px;margin:0 auto 34px}
+#san-pham .section-head .lead{max-width:760px;margin-inline:auto}
+#san-pham .gallery-card .sub-shot-cut img{object-fit:contain;background:#fff7f0;padding:10px}
+@media(max-width:560px){#san-pham #product-showcase-title{font-size:clamp(1.75rem,7.2vw,2.28rem);line-height:1.24}#san-pham .gallery-card{grid-template-columns:repeat(2,minmax(0,1fr))}#san-pham .gallery-card .sub-shot{min-height:145px}.mini-cut img{width:100%;height:auto;max-height:170px;object-fit:contain}}
 </style>
 <meta content="images/banh-chinh.jpg" property="og:image"/></head>
 <body>
@@ -421,13 +429,13 @@ body{background:#fffdf9}
 <div class="container">
 <div class="section-head centered center reveal">
 <p class="eyebrow">SẢN PHẨM NỔI BẬT</p>
-<h2 id="product-showcase-title">Chạm vị quê nhà. Khám phá điều mới.</h2>
+<h2 id="product-showcase-title"><span>Chạm vị quê nhà.</span><span>Khám phá điều mới.</span></h2>
 <p class="lead">Một chiếc bánh lấy cảm hứng từ củ khoai thân thuộc, kết hợp hình thức bánh ngọt hiện đại và nhân kataifi caramel mặn.</p>
 </div>
 <div class="product-hero-grid">
 <div aria-label="Bộ ảnh sản phẩm" class="gallery-card reveal">
 <div class="main-shot"><img alt="Ảnh chính của bánh khoai lang Kataifi Caramel mặn" decoding="async" height="768" loading="lazy" src="images/banh-chinh.jpg" width="1024"/></div>
-<div class="sub-shot"><img alt="Ảnh mặt cắt bánh khoai lang Kataifi Caramel mặn" decoding="async" height="341" loading="lazy" src="images/mat-cat.jpg" width="594"/></div>
+<div class="sub-shot sub-shot-cut"><img alt="Ảnh mặt cắt bánh khoai lang Kataifi Caramel mặn" decoding="async" height="341" loading="lazy" src="images/mat-cat.jpg" width="594"/></div>
 <div class="sub-shot"><img alt="Ảnh hộp bánh khoai lang Kataifi Caramel mặn" decoding="async" height="419" loading="lazy" src="images/hop-banh.jpg" width="771"/></div>
 </div>
 <div class="content-card product-summary reveal">
@@ -629,7 +637,7 @@ body{background:#fffdf9}
 <div class="trace-item"><strong>Nhà cung cấp khoai lang</strong><p>T&amp;B Fresh Farm.</p></div>
 <div class="trace-item"><strong>Tỷ lệ khoai lang trong công thức</strong><p>70%.</p></div>
 <div class="trace-item"><strong>Nhân caramel mặn</strong><p>Được phối từ whipping cream, đường, bơ và muối.</p></div>
-<div class="trace-item"><strong>Đối tác/xưởng gia công được nhóm cung cấp thông tin</strong><p>Theo thông tin do nhóm cung cấp, xưởng có HACCP và ISO 22000. Chưa có chứng từ đính kèm để kiểm tra phạm vi và hiệu lực; đây không phải chứng nhận của sản phẩm.</p></div>
+<div class="trace-item"><strong>Địa điểm thực hiện / gia công thử nghiệm</strong><p>Viện Công nghệ Sinh học và Thực phẩm, Trường Đại học Công nghiệp Thành phố Hồ Chí Minh.</p></div>
 </div>
 </div>
 <div class="source-block reveal">
