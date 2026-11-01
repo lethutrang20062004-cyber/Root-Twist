@@ -424,6 +424,12 @@ body{background:#fffdf9}
  #why-title,#research-title{font-size:clamp(1.75rem,6vw,2.6rem);line-height:1.22}
  #why-title span,#research-title span{display:block}
 }
+
+/* Bản hoàn thiện sau khi xác minh tên ảnh thực tế trên GitHub */
+#nguon-goc .ingredient-photo-pending{background:#fff;overflow:hidden}
+#nguon-goc .ingredient-photo-pending img{position:static;width:100%;height:100%;object-fit:contain;object-position:center;padding:12px;display:block;background:#fff}
+#nguon-goc .ingredient-photo-pending>span{display:none}
+@media(max-width:640px){#nguon-goc .ingredient-photo-pending img{padding:8px}}
 </style>
 <meta content="images/banh-chinh.jpg" property="og:image"/></head>
 <body>
@@ -704,8 +710,8 @@ body{background:#fffdf9}
 <p class="muted">Hình ảnh các nguyên liệu và nhãn hàng do nhóm cung cấp để giới thiệu thành phần được sử dụng trong quá trình phát triển.</p>
 <div class="mini-gallery">
 <figure><img alt="Khoai lang Nhật" decoding="async" height="500" loading="lazy" src="images/khoai-lang-nhat.jpg" width="500"/><figcaption>Khoai lang Nhật</figcaption></figure>
-<figure class="ingredient-added"><div class="ingredient-photo-pending"><span aria-hidden="true">🌾</span><img alt="Bột năng" loading="lazy" src="images/bot-nang.jpg" onerror="this.remove()"/></div><figcaption>Bột năng</figcaption></figure>
-<figure class="ingredient-added"><div class="ingredient-photo-pending"><span aria-hidden="true">🍚</span><img alt="Bột nếp" loading="lazy" src="images/bot-nep.jpg" onerror="this.remove()"/></div><figcaption>Bột nếp</figcaption></figure>
+<figure class="ingredient-added"><div class="ingredient-photo-pending"><img alt="Bột năng" loading="lazy" src="images/bot-nang.png"/></div><figcaption>Bột năng</figcaption></figure>
+<figure class="ingredient-added"><div class="ingredient-photo-pending"><img alt="Bột nếp" loading="lazy" src="images/bot-nep.png"/></div><figcaption>Bột nếp</figcaption></figure>
 <figure><img alt="Sợi kataifi" decoding="async" height="466" loading="lazy" src="images/kataifi-thuc-te.jpg" width="699"/><figcaption>Sợi kataifi</figcaption></figure>
 <figure><img alt="Chocolate đen" decoding="async" height="623" loading="lazy" src="images/chocolate-thuc-te.jpg" width="520"/><figcaption>Chocolate đen</figcaption></figure>
 <figure><img alt="Đường tinh luyện" decoding="async" height="447" loading="lazy" src="images/duong-thuc-te.jpg" width="447"/><figcaption>Đường tinh luyện</figcaption></figure>
